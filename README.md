@@ -50,3 +50,9 @@ currently supported.
 [3]: http://nerds.airbnb.com/smartstack-service-discovery-cloud/
 [4]: https://github.com/airbnb/synapse
 
+### TODO
+
+* Support http, udp proxying
+* Support multiple ports
+* Make ETCD prefix configurable
+* Support other backends (consul, zookeeper, redis, etc.)
