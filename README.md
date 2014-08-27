@@ -5,6 +5,8 @@ docker-register.
 Together, they implement [service discovery][2] for docker containers with a similar architecture
 to [SmartStack][3].  docker-discovery is analagous to [synapse][4] in the SmartStack system.
 
+See also [Docker Service Discovery Using Etcd and Haproxy][5]
+
 ### How it works
 
 When running, the container will setup ports on the host that can be accessed from other locally
@@ -49,6 +51,7 @@ currently supported.
 [2]: http://jasonwilder.com/blog/2014/02/04/service-discovery-in-the-cloud/
 [3]: http://nerds.airbnb.com/smartstack-service-discovery-cloud/
 [4]: https://github.com/airbnb/synapse
+[5]: http://jasonwilder.com/blog/2014/07/15/docker-service-discovery/
 
 ### TODO
 
