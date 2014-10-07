@@ -4,11 +4,14 @@ import etcd
 from jinja2 import Environment, PackageLoader
 import os
 from subprocess import call
+import signal
 import sys
 import time
 
 env = Environment(loader=PackageLoader('haproxy', 'templates'))
 POLL_TIMEOUT=5
+
+signal.signal(signal.SIGCHLD, signal.SIG_IGN)
 
 def get_etcd_addr():
     if "ETCD_HOST" not in os.environ:
