@@ -1,0 +1,15 @@
+[Unit]
+Description=docker-discover
+After=docker.service
+
+[Service]
+EnvironmentFile=/etc/environment
+TimeoutStartSec=0
+ExecStartPre=-/usr/bin/docker kill docker-discover
+ExecStartPre=-/usr/bin/docker rm docker-discover
+ExecStartPre=/usr/bin/docker pull jwilder/docker-discover
+ExecStart=/usr/bin/docker run --name docker-discover --net host -e ETCD_HOST=${COREOS_PRIVATE_IPV4}:4001 jwilder/docker-discover
+ExecStop=/usr/bin/docker stop docker-discover
+
+[X-Fleet]
+Global=true
