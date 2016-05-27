@@ -59,3 +59,7 @@ currently supported.
 * Support multiple ports
 * Make ETCD prefix configurable
 * Support other backends (consul, zookeeper, redis, etc.)
+
+### License
+
+MIT
